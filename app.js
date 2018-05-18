@@ -8,10 +8,10 @@ const productRoutes = require('./api/routes/products.routes');
 const orderRoutes = require('./api/routes/orders.routes');
 
 // Connect with MongoDB Atlas DaaS
-// mongoose.connect('mongodb+srv://node-shop:' + process.env.MONGO_ATLAS_PSW + '@node-shop-msfkg.mongodb.net/node-shop?retryWrites=true');
+// mongoose.connect('mongodb+srv://node-shop:' + process.env.DB_PSW + '@node-shop-msfkg.mongodb.net/node-shop?retryWrites=true');
 
 // Connect with mLab DaaS
-mongoose.connect('mongodb://node-shop:' + process.env.MONGO_ATLAS_PSW + '@ds041486.mlab.com:41486/node-shop');
+mongoose.connect('mongodb://node-shop:' + process.env.DB_PSW + '@ds041486.mlab.com:41486/node-shop');
 
 mongoose.Promise = global.Promise;
 

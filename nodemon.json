@@ -3,6 +3,6 @@
         "PROTOCOL": "http://",
         "HOST": "localhost", 
         "PORT": "3000",
-        "MONGO_ATLAS_PSW": "itsunderdevelopment"
+        "DB_PSW": "itsunderdevelopment"
     }
 }
