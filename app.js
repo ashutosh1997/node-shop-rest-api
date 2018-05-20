@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products.routes');
 const orderRoutes = require('./api/routes/orders.routes');
+const userRoutes = require('./api/routes/user.routes');
 
 // Connect with MongoDB Atlas DaaS
 // mongoose.connect('mongodb+srv://node-shop:' + process.env.DB_PSW + '@node-shop-msfkg.mongodb.net/node-shop?retryWrites=true');
@@ -16,6 +17,7 @@ mongoose.connect('mongodb://node-shop:' + process.env.DB_PSW + '@ds041486.mlab.c
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -33,6 +35,7 @@ app.use((req, res, next) => {
 // Routes to handle requests
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 // Handling Not Found errors
 app.use((req, res, next) => {

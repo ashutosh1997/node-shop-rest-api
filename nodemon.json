@@ -3,6 +3,7 @@
         "PROTOCOL": "http://",
         "HOST": "localhost", 
         "PORT": "3000",
-        "DB_PSW": "itsunderdevelopment"
+        "DB_PSW": "itsunderdevelopment",
+        "JWT_KEY": "secretkey"
     }
 }
